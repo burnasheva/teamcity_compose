@@ -1,4 +1,4 @@
-# teamcity_compose
+# TeamCity compose example
 Simple compose files to run TeamCity server together with agents
 
 * to run latest released version use: `docker-compose up -d`
