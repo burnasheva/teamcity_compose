@@ -12,8 +12,19 @@ services:
     environment:
       - SERVER_URL=http://server:8111
       - AGENT_NAME=regular_agent
+  teamcity-agent-sudo:
+    image: jetbrains/teamcity-agent:2020.1.2-linux-sudo
+    environment:
+      - SERVER_URL=http://server:8111
+      - AGENT_NAME=sudo_agent
+      - DOCKER_IN_DOCKER=start
+    privileged: true
+    volumes: 
+      - docker_volumes:/var/lib/docker
   teamcity-minimal-agent:
     image: jetbrains/teamcity-minimal-agent:latest
     environment:
       - SERVER_URL=http://server:8111
       - AGENT_NAME=minimal_agent
+volumes: 
+  docker_volumes:

@@ -1,0 +1,10 @@
+version: "3"
+services:
+  server:
+    image: registry.jetbrains.team/teamcity/teamcity-server:2020.1.2
+  teamcity-agent:
+    image: registry.jetbrains.team/teamcity/teamcity-agent:2020.1.2
+  teamcity-agent-sudo:
+    image: registry.jetbrains.team/teamcity/teamcity-agent:2020.1.2-linux-sudo
+  teamcity-minimal-agent:
+    image: registry.jetbrains.team/teamcity/teamcity-minimal-agent:2020.1.2
